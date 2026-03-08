@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Checkout - DonutOutlet</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Checkout</h1>
+
+<div class="card" id="summary"></div>
+
+<p>Payment integration placeholder.</p>
+<p>Connect a payment processor or crypto payment gateway here.</p>
+
+<script>
+let item = localStorage.getItem("item");
+let price = localStorage.getItem("price");
+let amount = localStorage.getItem("amount");
+
+let total = price * amount;
+
+document.getElementById("summary").innerHTML =
+"<h3>" + item + "</h3>" +
+"<p>Amount: " + amount + "</p>" +
+"<p>Total: $" + total + "</p>";
+</script>
+
+</body>
+</html>
